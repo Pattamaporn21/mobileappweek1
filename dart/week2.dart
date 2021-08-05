@@ -15,7 +15,7 @@ int callColor([String newColor = "pink"]) {
   List<dynamic> color = ["red", "blue", "green"];
 
   color.add(newColor);
-//คำสั่ง forin ทำซ้ำร่วมกับ list array
+//คำสั่ง forin 
   for (var item in color) { 
     print(item);
   }
