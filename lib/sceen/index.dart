@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+// ignore: unused_import
+import '../config/Constant.dart';
+
 class Index extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -7,6 +10,7 @@ class Index extends StatelessWidget {
 
     return Scaffold(
         body: Container(
+          color: Colors.yellow[100],
       alignment: Alignment.topCenter,
       child: Stack(
         children: [
@@ -57,7 +61,7 @@ class Index extends StatelessWidget {
               Text(
                 "Welcome To KMUTNB",
                 style: TextStyle(
-                  color: Colors.amber[900],
+                  color: Colors.orange,
                   fontSize: 32,
                   fontFamily: 'courier',
                   fontWeight: FontWeight.bold,
@@ -74,16 +78,17 @@ class Index extends StatelessWidget {
                 ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.orange,
+                  primary: jColor,
                   padding: EdgeInsets.fromLTRB(120, 10, 120, 10),
                   shape: StadiumBorder(),
                 ),
                 child: Text(
-                  "Login",
+                  "Sign in",
                   style: TextStyle(fontSize: 24),
                 ),
                 onPressed: () {
                   print("Hello world");
+                  Navigator.pushNamed(context, 'login'); //กดให้ไปหน้าถัดไป
                 },
               ),
               SizedBox(
@@ -91,16 +96,17 @@ class Index extends StatelessWidget {
                 ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.orange,
+                  primary: PColor,//
                   padding: EdgeInsets.fromLTRB(120, 10, 120, 10),
                   shape: StadiumBorder(),
                 ),
                 child: Text(
-                  "Logout",
+                  "Register",
                   style: TextStyle(fontSize: 24),
                 ),
                 onPressed: () {
                   print("Hello world");
+                   Navigator.pushNamed(context, 'Register');
                 },
               ),
             ],
