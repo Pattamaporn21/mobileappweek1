@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       home: Index(), //เรียก class
       routes: {
         'login': (context) => login(), //กำหนดชื่อเรียก
-     'Register': (context) => Register(),
+        'Register': (context) => Register(),
       },
       theme: ThemeData(
         primaryColor: sColor,
